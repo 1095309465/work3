@@ -1,1 +1,1 @@
-include ':appH5'
+include ':appH5', ':LiveApp', ':vitamio-sample', ':vitamio', ':LambdaApp'

@@ -8,7 +8,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/LambdaApp" />
+            <option value="$PROJECT_DIR$/LiveApp" />
             <option value="$PROJECT_DIR$/appH5" />
+            <option value="$PROJECT_DIR$/vitamio" />
+            <option value="$PROJECT_DIR$/vitamio-sample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

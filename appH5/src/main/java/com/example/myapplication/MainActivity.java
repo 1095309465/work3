@@ -6,7 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.example.myapplication.activitys.Main2Activity;
 import com.example.myapplication.activitys.WebActivity;
+import com.example.myapplication.designmodle.CeLueModle.TravelContext;
+import com.example.myapplication.designmodle.CeLueModle.WalkStrategy;
+import com.example.myapplication.designmodle.CloneModle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +34,29 @@ public class MainActivity extends AppCompatActivity {
 //        interTest();
 //        interTerst2();
 //        interTest3();
+        onText();
+    }
+
+    public void onText() {
+        CloneModle cloneModle = new CloneModle();
+        cloneModle.setAge(10);
+        cloneModle.setHeight(123);
+        cloneModle.setName("张三");
+        cloneModle.setWeight(65);
+
+        Log.e(TAG, "CloneModle=" + cloneModle.toString());
+
+        CloneModle cloneModle1 = (CloneModle) cloneModle.clone();
+        cloneModle1.setName("李四");
+        Log.e(TAG, "CloneModle1=" + cloneModle1.toString());
+
+
+        CloneModle cloneModle2 = (CloneModle) cloneModle.clone();
+        Log.e(TAG, "CloneModle2=" + cloneModle2.toString());
+
+        TravelContext travelContext = new TravelContext();
+        travelContext.setStrategy(new WalkStrategy());
+        travelContext.travel();
     }
 
     public void interTest() {
@@ -254,8 +281,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    //\h5混合开发
     public void btn_web(View view) {
         startActivity(new Intent(this, WebActivity.class));
+    }
+
+    //设计模式
+    public void btn_design(View view) {
+        startActivity(new Intent(this, Main2Activity.class));
     }
 
 
